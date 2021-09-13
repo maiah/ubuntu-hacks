@@ -59,7 +59,7 @@ $ sudo systemctl restart NetworkManager.service
 ```
 $ sudo su
 $ wpa_passphrase ZTE_5G_TYeASQ >> /etc/wpa_supplicant.conf YOUR_WIFI_PASSWORD_HERE
-$ cat /etc/wpa_supplicant.conf
+$ cat /etc/wpa_supplicant.conf // you should see your WiFi password encrypted here
 $ lsmod | grep iwlagn
 $ lshw -C network
 ```
@@ -69,7 +69,7 @@ $ lshw -C network
 $ wpa_supplicant
 ```
 
-- Then it should show the ff drivers for example:
+- Then it should show the ff drivers for example. The `nl80211` is the generic driver installed by default. You might also see the specific network wifi driver if available.
 ```
 drivers:
   nl80211 = Linux nl80211/cfg80211
@@ -79,7 +79,7 @@ drivers:
   none = no driver (RADIUS server/WPS ER)
 ```
 
-- Then enable the WIFI driver:
+- Then enable the WIFI driver `nl80211`:
 ```
 $ wpa_supplicant -B -D nl80211 -i wlp1s0 -c /etc/wpa_supplicant.conf
 ```
