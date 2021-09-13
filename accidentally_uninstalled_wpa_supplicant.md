@@ -10,8 +10,8 @@ $ sudo apt autoremove
 Pre-requisites
 --------------
 - From a separate computer with internet download the following files:
-  * `wpasupplicant_2.9-1ubuntu4_amd64.deb`
-  * `libpcsclite1_1.8.26-3_amd64.deb`
+  * [wpasupplicant_2.9-1ubuntu4_amd64.deb](https://ubuntu.pkgs.org/20.04/ubuntu-main-amd64/wpasupplicant_2.9-1ubuntu4_amd64.deb.html)
+  * [libpcsclite1_1.8.26-3_amd64.deb](https://ubuntu.pkgs.org/20.04/ubuntu-main-amd64/libpcsclite1_1.8.26-3_amd64.deb.html)
 
 Steps
 -----
