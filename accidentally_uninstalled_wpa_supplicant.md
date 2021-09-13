@@ -50,7 +50,7 @@ $ sudo iw wlp1s10 link
 $ sudo iw wlp1s0 scan > ssids.txt
 ```
 
-- Note the SSID, for the commands below let's assume it's `ZTE_5G_TYeASQ` for example. Restart NetworkManager for now:
+- Note the SSID. For the commands below let's assume it's `ZTE_5G_TYeASQ` for example. Restart NetworkManager for now:
 ```
 $ sudo systemctl restart NetworkManager.service
 ```
@@ -90,3 +90,25 @@ $ sudo dhclient wlp1s0 -v -r wlp1s0 // to release first
 $ sudo dhclient wlp1s0 -v -4 wlp1s0 // option -4 is to request for v4 IP Address scheme
 ```
 
+- On a separate terminal check if you have IP Address:
+```
+$ sudo ifconfig
+```
+
+- For troubleshooting, you can restart your WIFI interface:
+```
+$ sudo ifconfig wlp1s0 down
+$ sudo ifconfig wlp1s0 up
+```
+
+- If IP Address is received, you are now connected to internet. You can download NetworkManager:
+```
+$ sudo apt-install network-manager
+$ sduo systemctl restart NetworkManager.service
+```
+
+- Install VPN Manager too if you need:
+```
+$ sudo apt-get install network-manager-openvpn network-manager-openvpn-gnome
+$ sduo systemctl restart NetworkManager.service
+```
