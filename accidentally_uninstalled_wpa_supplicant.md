@@ -104,11 +104,15 @@ $ sudo ifconfig wlp1s0 up
 - If IP Address is received, you are now connected to internet. You can download NetworkManager:
 ```
 $ sudo apt-install network-manager
+$ sudo ifconfig wlp1s0 down
+$ sudo ifconfig wlp1s0 up
 $ sduo systemctl restart NetworkManager.service
 ```
+
+- By this time Network and Wifi in Settings GUI should show up.
 
 - Install VPN Manager too if you need:
 ```
 $ sudo apt-get install network-manager-openvpn network-manager-openvpn-gnome
-$ sduo systemctl restart NetworkManager.service
+$ sudo systemctl restart NetworkManager.service
 ```
